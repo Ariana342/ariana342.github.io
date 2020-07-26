@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Coding Part</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <script src="script.js"></script>
+    </head>
+    <body>
+      <h1 class='instr'>Instructions</h1>
+      <p class='instr'>Please press the button labeled 'Render' to set up the board randomly</p>
+      <p class='instr'>Select two items to swap, then press the button labeled 'Swap' to confirm</p>
+
+      <button onclick="addItemsToContainer()">RENDER</button>
+      <div class="grid-container" id="container"></div>  
+      <button onclick="swap()">SWAP</button>
+
+      <!--ERROR Popup-->
+      <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup('popup-1')">&times;</div>
+          <h1>ERROR</h1>
+          <p>You must check exactly two boxes to swap</p>
+        </div>
+      </div>
+
+      <!--Solved Popup-->
+      <div class="popup" id="popup-2">
+        <div class="overlay"></div>
+        <div class="content">
+          <div class="close-btn" onclick="togglePopup('popup-2')">&times;</div>
+          <h1>PUZZLE SOLVED</h1>
+            <p id="puzzle"></p>
+        </div>
+      </div>
+    </body>
+</html>
