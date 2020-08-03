@@ -1,60 +1,42 @@
-var players[];
-var playerHomes[];
+var players;
 
-//Players give out their information
-//Game board is set up
-//Each home gets four players
-//Roll dice option
-
-function rollDice(){
-	//var num_1 = Math.random() * (6 - 1) + 1; 
-	//var num_2 = Math.random() * (6 - 1) + 1; 
-
-	alert('Hello');
-}
-
-function addToPlayerArray(player){
-	players.appendChild(player);
-}
-
-function postInfoForm(){
-	alert('Alert');
-}
-
-function createPlayer(){
-	var player = postInfoForm();
-
-	var player = {
-	  userName: user_name,
-	  homeName: home_name,
-	  home: user_home;
-	};
-	addToPlayerArray(player);
+function initialize(){
+	players = getPlayers();
 }
 
 function getPlayers(){
-	for(i = 0; i < 4; i++)
-		createPlayer();
+	players = [];
+	var player;
+	for(i = 0; i < 4; i++){
+		player = createNewPlayer();
+		players.push(player);
+	}
 }
 
-function togglePopup(id){
-  document.getElementById(id).classList.toggle("active");
+function createNewPlayer(){
+	var player = prompt('Please enter your name')
 }
 
-function startGame(){
-	playerHomes = ['sakura','cicada','temple','snow'];
-	getPlayers();
+function rollDice(){
+	var min = 1;
+    var max = 6;
+    var num_1 = Math.floor(Math.random() * (max - min + 1)) + min;
+    var num_2 = Math.floor(Math.random() * (max - min + 1)) + min;
 
-	setUpBoard();
+	alert('Roll: ( '+num_1+', '+num_2+' )');
+	isValidRoll();
 }
 
-function initializeHomes(){
-	var sakura = {
-	  userName: user_name,
-	  baseName: base_name,
-	  base: user_base;
-	};
+function isValidRoll(){
+
 }
 
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
 
 
