@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS 355 Home Page</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+     h1{
+        padding-top: 20%;
+        color: #f9f9f9;
+        text-align: center;
+     }
+     p{
+        color: #f9f9f9;
+     }
+  </style>
+</head>
+<body>
+   <!-- NAVBAR BEGINS HERE-->
+   <nav id="navbar">
+     <ul>
+       <li class="dropdown">
+         <a href="index.html" class="dropbtn">Home</a>
+         <div class ="dropdown-content">
+         </div>
+       </li>
+       <li class="dropdown">
+         <a href="#" class="dropbtn">Course</a>
+         <div class="dropdown-content">
+           <a href="https://www.zybooks.com/" target="_blank">ZyBooks</a>
+           <a href="https://tophat.com/" target="_blank">TopHat</a>
+           <a href="https://drive.google.com/open?id=1AsHhIFfQ3yNE_m2z4wswRfKh77K0UH9w" target="_blank">Course Google Drive</a>
+           <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+         </div>
+       </li>
+       <li class="dropdown">
+         <a href="#" class="dropbtn">About</a>
+         <div class="dropdown-content">
+           <a href="developer.html">About The Developer</a>
+           <a href="contact.html">Contact</a>
+           <a href="rules.html">Rules</a>
+           <a href="history.html">History</a>
+           <a href=" https://www.google.com/search?q=ludo">Search</a>
+         </div>
+       </li>
+       <li class="dropdown">
+          <a href="#" class="dropbtn">Browser</a>
+          <div class="dropdown-content">
+             <a href="navigator.html">Navigator</a>
+             <a href="window.html">Window</a>
+             <a href="screen.html">Screen</a>
+             <a href="location.html">Location</a>
+             <a href="geolocation.html">Geolocation</a>
+          </div>
+        </li>
+        <li class="dropdown">
+           <a href="#" class="dropbtn">Search</a>
+           <div class="dropdown-content">
+              <a href="fromFile.html">From File</a>
+              <a href="googleAPI.html">Google API</a>
+           </div>
+        </li>
+      </ul>
+   </nav>
+   <!--NAVBAR ENDS HERE-->
+   <section>
+    <ul>
+      <li>There must be 2 – 4 players</li>
+      <li>Each player chooses a colour as their “home” (no duplicates)</li>
+      <li>Each player rolls one dice and the player with the highest number goes first, second highest goes second and so forth</li>
+      <li>Players most roll a six on either die to move one of their men outside of the home</li>
+      <li>If a player rolls two 6s, they may either choose to move one man outside and subsequently move that single man six positions forward or move two men out of the house</li>
+      <li>If a player fails to roll a six on their turn and none of their men are outside the house, they lose their turn</li>
+      <li>If a player places two of their men on the same tile, that is called a “block” and all opposing players behind it cannot advance forward</li>
+      <li>If Player A lands on the same tile as Player B’s man, Player B must return that man to the home</li>
+      <li>The goal is to get all men into the safehouse, marked by the triangle at the top</li>
+      <li>For one man to get into the safehouse, each man must traverse the entire board before advancing upward towards the safehouse</li>
+      <li>No other players can enter the vertical path leading up to the safehouse, so each player’s men are in a safe-zone once they reach that landmark and cannot be sent back to the original home</li>
+      <li>Players cannot move their men backwards after making a move</li>
+      <li>Only one person can win and the game ends when all four men of a single player are in the safehouse</li>
+    </ul>
+  </section>
+</body>
+</html>

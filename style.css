@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: "Monseratt", sans-serif;
+}
+
+html{
+  background-color: #222629;
+}
+section h2 h1{
+  font-family: "Monseratt", sans-serif;
+  text-align: center;
+  height: 200px;
+  color: white;
+  font-size: 20px;
+}
+
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+img {
+  width: 250px;
+  height: auto;
+}
+.dice-button-wrapper {
+  position:center;
+}
+
+button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.dropdown {
+  float: left;
+  text-align: center;
+}
+a {
+  text-align: center;
+}
+ul {
+  color: white;
+  margin-left: 20px;
+}
+h1 {
+  padding-top: 20%;
+  color: #f9f9f9;
+  text-align: center;
+}   
+p {
+  color: #f9f9f9;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 15px;
+  text-decoration: none;
+}
+
+li a:hover{
+  background-color: #34495e;
+}
+
+.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: grey;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #eeeeee;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*Contact.html*/
+.contact-section {
+  background-size:cover;
+  background: #222629;
+  padding: 40px 0;
+}
+
+.contact-section h1 {
+  text-align: center;
+  color: #E0E0E0;
+}
+
+.border {
+  width:100px;
+  height: 10px;
+  background: #34495e;
+  margin: 40px auto;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text {
+  display: block;
+  width: 100%;
+  box-sizing border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #111;
+  padding: 20px 40px;
+  outline: none;
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.contact-form-text:hover {
+  box-shadow: : 0 0 10px 4px #34495e;
+}
+
+textarea.contact-form-text {
+  resize: none;
+  height:120px;
+}
+
+.contact-form-btn {
+  float: right;
+  border: 0;
+  background: #34495e;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.contact-form-btn:hover {
+  background: #2980b9;
+}
+
+.outer-grid-container {
+  transform: translate(50%,0%);
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+}
+
+.inner-grid-container {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  background-color: #2196F3;
+}
+
+.inner-grid-container-two {
+  display: inline-grid;
+  grid-template-rows: auto auto auto auto auto auto;
+  background-color: #2196F3;
+}
+
+.center-wrapper {
+  width: 150px;
+  height: 150px;
+}
+
+.one-one {
+  background-color: #ffb6c1;
+}
+
+.one-three {
+  background-color: #addf2f;
+}
+
+.three-one {
+  background-color: #D8E6F3;
+}
+
+.three-three {
+  background-color: #d55b35;
+}
+
+.up {
+  position: absolute;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 75px solid transparent;
+  border-bottom: 75px solid #D8E6F3;
+}
+
+.down {
+  position: absolute;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 75px solid #c1e30f;
+  border-bottom: 75px solid transparent;
+}
+
+.left {
+  position: absolute;
+  border-left: 75px solid transparent;
+  border-right: 75px solid #d55b35;
+  border-top: 75px solid transparent;
+  border-bottom: 75px solid transparent;
+}
+
+.right {
+  position: absolute;
+  border-left: 75px solid #ffb6c1;
+  border-right: 75px solid transparent;
+  border-top: 75px solid transparent;
+  border-bottom: 75px solid transparent;
+}
+
+.grid-item {
+  background-color: #ede1d1;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+}
+
+.horizontal-grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+}
+
+.outer-home-grid-item {
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  width: 50px;
+  height: 50px;
+}
+
+#one-one {
+  background-image: url("sakura.jpg");
+  background-size: 300px;
+}
+
+#one-three {
+  background-image: url("cicada.jpg");
+  background-size: 300px;
+}
+
+#three-one {
+  background-image: url("bridge.jpg");
+  background-size: 300px;
+}
+
+#three-three {
+  background-image: url("temple.jpg");
+  background-size: 300px;
+}
+
+.star {
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-60px;
+  margin-left:-50px;
+}
+
+.circle {
+    background: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.star-six {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  position: relative;
+}
+.star-six:after {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid red;
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: -50px;
+}
+.dice {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding-left: 200px;
+}
+.dot-container{
+  position: relative;
+  background-color: white;
+  padding: 20px;
+}
+.dot {
+    display: block;
+    margin: 20px;
+    background: black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+div > img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  margin: auto;
+}
+
+.dice-package {
+  padding-top:20px;
+  padding-left: 410px;
+}
+
+#sakura_star {
+  z-index:1;
+}
+#cicada_star {
+  z-index:1;
+}
+#snow_star {
+  z-index:1;
+}
+#temple_star {
+  z-index:1;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div > form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.info-form {
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 500px;
+  padding: 10px;
+  background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+{box-sizing: border-box;}
