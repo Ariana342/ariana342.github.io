@@ -10,51 +10,103 @@
     <body>
        <!-- NAVBAR BEGINS HERE-->
        <nav id="navbar">
-         <ul>
-           <li class="dropdown">
-             <a href="index.html" class="dropbtn">Home</a>
-             <div class ="dropdown-content">
-             </div>
-           </li>
-           <li class="dropdown">
-             <a href="#" class="dropbtn">Course</a>
+        <ul>
+         <li class="dropdown">
+           <a href="index.html" class="dropbtn">Home</a>
+           <div class ="dropdown-content">
+           </div>
+         </li>
+         <li class="dropdown">
+           <a href="#" class="dropbtn">About</a>
+           <div class="dropdown-content">
+             <a href="developer.html">About The Developer</a>
+             <a href="history.html">A Brief History</a>
+           </div>
+         </li>
+          <li class="dropdown">
+             <a href="#" class="dropbtn">Games</a>
              <div class="dropdown-content">
-               <a href="https://www.zybooks.com/" target="_blank">ZyBooks</a>
-               <a href="https://tophat.com/" target="_blank">TopHat</a>
-               <a href="https://drive.google.com/open?id=1AsHhIFfQ3yNE_m2z4wswRfKh77K0UH9w" target="_blank">Course Google Drive</a>
-               <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+               <a href="board.html">My Version</a>
+               <a href="http://www.playonlinedicegames.com/ludo" target="_blank">Alternative #1</a>
+               <a href="https://poki.com/en/g/ludo-multiplayer" target="_blank">Alternative #2</a>
+               <a href="http://www.agame.com/game/ludo-legend?adwordsKeyword=&adwordsAdgroupId=2790517820&gclid=CjwKCAjwsan5BRAOEiwALzomX2P0EbZq6tm2HruT-wyABX--ySEJuGsdPLoaVI7MWCvYyIXwYBs0XBoCwfkQAvD_BwE" target="_blank">Alternative #3</a>
              </div>
-           </li>
-           <li class="dropdown">
-             <a href="#" class="dropbtn">About</a>
-             <div class="dropdown-content">
-               <a href="developer.html">About The Developer</a>
-               <a href="contact.html">Contact</a>
-               <a href="rules.html">Rules</a>
-               <a href="history.html">History</a>
-               <a href=" https://www.google.com/search?q=ludo">Search</a>
-             </div>
-           </li>
-           <li class="dropdown">
-              <a href="#" class="dropbtn">Browser</a>
+         </li>
+         <li class="dropdown">
+            <a href="contact.html" class="dropbtn">Contact</a>
+          </li>
+          <li class="dropdown">
+             <a href="rules.html" class="dropbtn">Rules</a>
+          </li>
+          <li class="dropdown">
+             <a href="https://www.google.com/search?q=ludo" target="_blank" class="dropbtn">Search</a>
+          </li>
+          <li class="dropdown" z>
+              <a href="#" class="dropbtn">Audio</a>
               <div class="dropdown-content">
-                 <a href="navigator.html">Navigator</a>
-                 <a href="window.html">Window</a>
-                 <a href="screen.html">Screen</a>
-                 <a href="location.html">Location</a>
-                 <a href="geolocation.html">Geolocation</a>
+              	<a href="#" onclick="playAudio()">Play</a>
+                  <a href="#" onclick="pauseAudio()">Pause</a>
               </div>
-            </li>
-            <li class="dropdown">
-               <a href="#" class="dropbtn">Search</a>
-               <div class="dropdown-content">
-                  <a href="fromFile.html">From File</a>
-                  <a href="googleAPI.html">Google API</a>
-               </div>
-            </li>
-          </ul>
-       </nav>
+          </li>
+        </ul>
+   </nav>
        <!--NAVBAR ENDS HERE-->
+       <audio id="game-audio" loop>
+        <source type="audio/mpeg">
+              Your browser does not support the audio element.
+        </audio>
+       <div class="button-container">
+            <button id="modal-btn" class="btn start" onclick="initialize()">Start</button>
+            <button id="dice-btn" class="btn roll" onclick="rollDice()">Roll</button>
+            <button id="dice-1-btn" onclick="setMoveType(textContent)"></button>
+            <button id="dice-2-btn" onclick="setMoveType(textContent)"></button>
+        </div>
+        <div id="dice-1" class="dice-container">
+          <div class="dice">
+            <div class="front face">
+              <div></div>
+            </div>
+            <div class="left face">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="right face">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="back face">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+         <div id="dice-2" class="dice-container">
+          <div class="dice">
+            <div class="front face">
+              <div></div>
+            </div>
+            <div class="left face">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="right face">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="back face">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
        <div class="outer-grid-container" id="outer-grid-container">
          <!--1,1-->
           <div class="inner-grid-container" id="one-one">
@@ -77,16 +129,28 @@
             <!--Row 3-->
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="doppio_1" class="chip-container">
+                <img class="chip" src="doppio_1.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="outer-home-grid-item one-one" id="box-9"></div>
 
             <!--Row 4-->
             <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="doppio_2" class="chip-container">
+                <img  class="chip" src="doppio_2.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="doppio_3" class="chip-container">
+                <img  class="chip" src="doppio_3.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
             <div class="outer-home-grid-item one-one" id="box-8"></div>
 
@@ -100,29 +164,30 @@
 
             <!--Row 6-->
             <div class="outer-home-grid-item one-one" id="box-1">
-              <img src="sakura_star.png">
+              <img class="star" src="sakura_star.png">
             </div>
             <div class="outer-home-grid-item one-one" id="box-2"></div>
             <div class="outer-home-grid-item one-one" id="box-3"></div>
             <div class="outer-home-grid-item one-one" id="box-4"></div>
             <div class="outer-home-grid-item one-one" id="box-5"></div>
-            <div class="outer-home-grid-item one-one" id="box-6"></div>
+            <div class="outer-home-grid-item one-one" id="box-6">
+            </div>
           </div>
            <!--1,2-->
           <div class="inner-grid-container-two" id="one-two">
             <!--Column 1-->
-            <div class="grid-item" id="box-12"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
+            <div class="grid-item vertical" id="box-12"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
           </div>
           <!--1,3-->
           <div class="inner-grid-container" id="one-three">
-            <!--Column 1-->
+            <!--Row 1-->
             <div class="outer-home-grid-item one-three"id="box-13">
-              <img src="cicada_star.png">
+              <img class="star" src="cicada_star.png">
             </div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -130,7 +195,7 @@
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 2-->
+            <!--Row 2-->
             <div class="outer-home-grid-item one-three" id="box-14"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -138,7 +203,7 @@
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 3-->
+            <!--Row 3-->
             <div class="outer-home-grid-item one-three" id="box-15"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -146,23 +211,35 @@
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 4-->
+            <!--Row 4-->
             <div class="outer-home-grid-item one-three" id="box-16"></div>
             <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="rohan_2" class="chip-container">
+                <img class="chip" src="rohan_2.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="rohan_1" class="chip-container">
+                <img class="chip" src="rohan_1.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 5-->
+            <!--Row 5-->
             <div class="outer-home-grid-item one-three" id="box-17"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="rohan_3" class="chip-container">
+                <img class="chip" src="rohan_3.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 6-->
+            <!--Row 6-->
             <div class="outer-home-grid-item one-three" id="box-18"></div>
             <div class="outer-home-grid-item one-three" id="box-19"></div>
             <div class="outer-home-grid-item one-three" id="box-20"></div>
@@ -173,35 +250,35 @@
           <!--2,1-->
           <div class="inner-grid-container" id="two-one">
             <!--Column 1-->
-            <div class="grid-item" id="box-48"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
+            <div class="grid-item horizontal" id="box-48"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
           </div>
           <!--2,2-->
           <div class="center-wrapper" id="two-two">
             <div class="triangles" id="triangles">
-              <div class="down" id="down"></div>
-              <div class="up" id="up"></div>
-              <div class="right" id="right"></div>
-              <div class="left" id="left"></div>
+              <div class="tri-down" id="down"></div>
+              <div class="tri-up" id="up"></div>
+              <div class="tri-right" id="right"></div>
+              <div class="tri-left" id="left"></div>
             </div>
           </div>
           <!--2,3-->
           <div class="inner-grid-container" id="two-three">
             <!--Column 1-->
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item" id="box-24"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal"></div>
+            <div class="grid-item horizontal" id="box-24"></div>
           </div>
           <!--3,1-->
           <div class="inner-grid-container" id="three-one">
-            <!--Column 1-->
+            <!--Row 1-->
             <div class="outer-home-grid-item three-one" id="box-47"></div>
             <div class="outer-home-grid-item three-one" id="box-46"></div>
             <div class="outer-home-grid-item three-one" id="box-45"></div>
@@ -209,7 +286,7 @@
             <div class="outer-home-grid-item three-one" id="box-43"></div>
             <div class="outer-home-grid-item three-one" id="box-42"></div>
 
-            <!--Column 2-->
+            <!--Row 2-->
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -217,23 +294,35 @@
             <div class="inner-home-grid-item"></div>
             <div class="outer-home-grid-item three-one" id="box-41"></div>
 
-            <!--Column 3-->
+            <!--Row 3-->
             <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="jotaro_1" class="chip-container">
+                <img class="chip" src="jotaro_1.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="jotaro_3" class="chip-container">
+                <img class="chip" src="jotaro_3.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
             <div class="outer-home-grid-item three-one" id="box-40"></div>
 
-            <!--Column 4-->
+            <!--Row 4-->
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="jotaro_2" class="chip-container">
+                <img class="chip" src="jotaro_2.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="outer-home-grid-item three-one" id="box-39"></div>
 
-            <!--Column 5-->
+            <!--Row 5-->
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -241,56 +330,68 @@
             <div class="inner-home-grid-item"></div>
             <div class="outer-home-grid-item three-one" id="box-38"></div>
 
-            <!--Column 6-->
+            <!--Row 6-->
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
             <div class="outer-home-grid-item three-one" id="box-37">
-              <img src="snow_star.png">
+              <img class="star" src="snow_star.png">
             </div>
           </div>
           <!--3,2-->
           <div class="inner-grid-container-two" id="three-two">
             <!--Column 1-->
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item" id="box-36"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical"></div>
+            <div class="grid-item vertical" id="box-36"></div>
           </div>
 
           <!--3,3-->
           <div class="inner-grid-container" id="three-three">
-            <!--Column 1-->
+            <!--Row 1-->
             <div class="outer-home-grid-item three-three" id="box-30"></div>
             <div class="outer-home-grid-item three-three" id="box-29"></div>
             <div class="outer-home-grid-item three-three" id="box-28"></div>
             <div class="outer-home-grid-item three-three" id="box-27"></div>
             <div class="outer-home-grid-item three-three" id="box-26"></div>
             <div class="outer-home-grid-item three-three" id="box-25">
-              <img src="temple_star.png">
+              <img class="star" src="temple_star.png">
             </div>
 
-            <!--Column 2-->
+            <!--Row 2-->
             <div class="outer-home-grid-item three-three" id="box-31"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="lisa_1" class="chip-container">
+                <img class="chip" src="lisa_1.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 3-->
+            <!--Row 3-->
             <div class="outer-home-grid-item three-three" id="box-32"></div>
             <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="lisa_3" class="chip-container">
+                <img class="chip" src="lisa_3.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
-            <div class="inner-home-grid-item"></div>
+            <div class="inner-home-grid-item">
+              <div id="lisa_2" class="chip-container">
+                <img class="chip" src="lisa_2.png">
+              </div>
+            </div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 4-->
+            <!--Row 4-->
             <div class="outer-home-grid-item three-three" id="box-33"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -298,7 +399,7 @@
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 5-->
+            <!--Row 5-->
             <div class="outer-home-grid-item three-three" id="box-34"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -306,7 +407,7 @@
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
 
-            <!--Column 6-->
+            <!--Row 6-->
             <div class="outer-home-grid-item three-three" id="box-35"></div>
             <div class="inner-home-grid-item"></div>
             <div class="inner-home-grid-item"></div>
@@ -315,33 +416,34 @@
             <div class="inner-home-grid-item"></div>
           </div>     
        </div>
-        <div class="dice-button-wrapper">
-          <button onclick="rollDice()">Roll Dice</button>
-        </div>
-        <div class="info-form">
-          <form class="form-container" action="action.php" method="post">
-            <div class="row">
-              <div class="col-25">
-                <label for="username">Username:</label>
+        <div class="modal-container" id="modal-container">
+          <div class="modal">
+            <div class="modal-header">
+              <h3>Please Complete the Form</h3>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-25">
+                  <label for="username">Username:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="username" id="username">
+                </div>
               </div>
-              <div class="col-75">
-                <input type="text" id="username" name="username">
-              </div>
+              <div class="row">
+                <div class="col-25">
+                  <label for="basename">Base Name:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" name="basename" id="basename">
+                </div>
             </div>
             <div class="row">
               <div class="col-25">
-                <label for="basename">Base Name:</label>
+                <label for="chosenbase">Base:</label>
               </div>
               <div class="col-75">
-                <input type="text" id="basename" name="basename">
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-25">
-                <label for="base">Base:</label>
-              </div>
-              <div class="col-75">
-                <select id="base" name="base">
+                <select id="chosenbase" name="chosenbase">
                   <option value="sakura">Sakura</option>
                   <option value="cicada">Cicada</option>
                   <option value="snow">Snow</option>
@@ -349,8 +451,20 @@
                 </select>
               </div>
             </div>
-            <input type="submit" name="submit">
-          </form>
-        </div> 
+          </div>
+          <div class="modal-footer">
+            <button id="submit" onclick="createUser(username.value,basename.value,chosenbase.value)">Submit</button>
+          </div>
+        </div>
+      </div>
+        <!--ERROR Popup-->
+        <div class="popup" id="popup-1">
+          <div class="overlay"></div>
+          <div class="content">
+            <div class="close-btn" onclick="togglePopup()">&times;</div>
+            <h1>ERROR</h1>
+            <p>You must fill in all fields</p>
+          </div>
+        </div>
     </body>
 </html>
